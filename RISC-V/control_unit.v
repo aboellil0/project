@@ -64,7 +64,7 @@ module main_decoder (
                 Jump = 0;
             end
             7'b0100011: begin // sw
-                ResultSrc = 2'bxx;
+                ResultSrc = 2'b00; // xx
                 MemWrite = 1;
                 ALUSrc = 1;
                 ImmSrc = 2'b01;
@@ -77,14 +77,14 @@ module main_decoder (
                 ResultSrc = 2'b00;
                 MemWrite = 0;
                 ALUSrc = 0;
-                ImmSrc = 2'bxx;
+                ImmSrc = 2'b00; // xx
                 RegWrite = 1;
                 Branch = 0;
                 ALUOp = 2'b10; 
                 Jump = 0;
             end
             7'b1100011: begin // beq
-                ResultSrc = 2'bxx;
+                ResultSrc = 2'b00; // xx
                 MemWrite = 0;
                 ALUSrc = 0;
                 ImmSrc = 2'b10;
@@ -106,21 +106,21 @@ module main_decoder (
             7'b1101111: begin // JAL
                 RegWrite = 1;
                 ImmSrc = 2'b11;
-                ALUSrc = 1'bx;
+                ALUSrc = 1'b0; // x
                 MemWrite = 0;
                 ResultSrc = 2'b10;
                 Branch = 0;
-                ALUOp = 2'bxx; 
+                ALUOp = 2'b00; // xx
                 Jump = 1; 
             end
             default: begin //default 
-                ResultSrc = 2'bxx;
+                ResultSrc = 2'b00; // xx
                 MemWrite = 0;
                 ALUSrc = 0;
                 ImmSrc = 2'b00;
                 RegWrite = 0;
                 Branch = 0;
-                ALUOp = 2'bxx;
+                ALUOp = 2'b00; // xx
                 Jump = 1; 
             end
         endcase
