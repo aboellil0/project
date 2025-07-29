@@ -148,7 +148,7 @@ module ALU_Decoder (
                     default: ALUControl = 3'bxxx; // Undefined operation
                 endcase
             end
-            default: ALUControl = 3'bxxx; // Undefined operation for other cases
+            default: ALUControl = 3'b000; //xxx // Undefined operation for other cases
         endcase
     end
 endmodule
