@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 module data_memory (
     input clk,
@@ -7,7 +7,7 @@ module data_memory (
     input WE, // MemWrite
     output reg [31:0] ReadData
 );
-    reg [31:0] memory [0:255]; 
+    reg [31:0] memory [0:127]; 
 
     always @(posedge clk) begin
         if (WE) begin
@@ -17,8 +17,8 @@ module data_memory (
     end
     integer i;
     initial begin
-        for (i = 0; i < 255; i = i + 1) begin
-            memory[i] = 32'b1010101010101010101010101010101010; 
+        for (i = 0; i < 128; i = i + 1) begin
+            memory[i] = 32'b10101010101010101010101010101010; 
         end
     end
 endmodule

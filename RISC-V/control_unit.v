@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 module control_unit (
     input [6:0] op,
@@ -121,6 +121,7 @@ module main_decoder (
                 RegWrite = 0;
                 Branch = 0;
                 ALUOp = 2'bxx;
+                Jump = 1; 
             end
         endcase
     end

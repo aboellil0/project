@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 
 // 000	ADD
 // 001	SUB
@@ -27,6 +28,6 @@ module alu (
             3'b111: ALUResult = SrcA >> SrcB; // SRL 
             default: ALUResult = 0;
         endcase
-        assign Zero = ALUResult == 0;
+        Zero = (ALUResult == 0);
     end
 endmodule

@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 
 module two_1_mux_tb (

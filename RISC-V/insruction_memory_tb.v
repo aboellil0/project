@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 module insruction_memory_tb ();
     reg [31:0] PC;

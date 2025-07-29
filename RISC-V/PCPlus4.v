@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 module PCPlus4 (
     input [31:0] pc,
