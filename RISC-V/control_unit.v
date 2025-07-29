@@ -136,8 +136,8 @@ module ALU_Decoder (
 );
     always @(*) begin
         case (ALUOp)
-            2'b00: ALUControl = 3'b010; // (add) Load/Store
-            2'b01: ALUControl = 3'b110; // (subtract) beq
+            2'b00: ALUControl = 3'b000; // (add) Load/Store
+            2'b01: ALUControl = 3'b001; // (subtract) beq
             2'b10: begin // R-type
                 case (funct3)
                     3'b000: ALUControl = (funct7 == 1'b1 && op == 1'b1) ? 3'b001 : 3'b000; // sub or add

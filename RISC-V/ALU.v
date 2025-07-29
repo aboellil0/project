@@ -27,6 +27,6 @@ module alu (
             3'b111: ALUResult = SrcA >> SrcB; // SRL 
             default: ALUResult = 0;
         endcase
-        Zero = (ALUResult == 0) ? 1 : 0;
+        assign Zero = ALUResult == 0;
     end
 endmodule

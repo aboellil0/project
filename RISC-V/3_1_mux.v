@@ -24,7 +24,7 @@ module three_1_mux(
     input [31:0] a,
     input [31:0] b,
     input [31:0] c,
-    input  [1:0] sel,
+    input [1:0] sel,
     output reg [31:0] out
 );
     always @(*) begin
